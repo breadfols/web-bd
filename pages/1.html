@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form class="form" method="get" action="/auth">
+            <h1>Авторизация</h1>
+            <input id="login" name="login" placeholder="login">
+            <div id="loginError" class="error"></div>
+            <div class="input-wrapper">
+                <input id="password" name="password" type="password" placeholder="password">
+                <span id="togglePassword" class="icon-eye"></span>
+            </div>
+            <div id="passError" class="error"></div>
+            <button id="Button">Войти</button>
+            <div>
+                <script 
+                    async 
+                    src="https://telegram.org/js/telegram-widget.js?22"
+                    data-telegram-login="auth_web_bot"
+                    data-size="large" 
+                    data-auth-url="http://test.ru/telegram" 
+                    data-request-access="write"
+                ></script>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
